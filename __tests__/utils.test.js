@@ -38,13 +38,13 @@ describe('utils', () => {
     const expectation = [{
       'image_url': expect.any(String),
       'name': expect.any(String),
-      'price': '$$',
+      'price': expect.any(String),
       'rating': expect.any(Number),
       'url': expect.any(String)
     }];
 
     const mungedYelp = mungeYelpData(yelp); 
 
-    expect(mungedYelp).toEqual(expectation);
+    expect(mungedYelp).toEqual(expect.arrayContaining(expectation));
   });
 });
