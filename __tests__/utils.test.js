@@ -46,5 +46,6 @@ describe('utils', () => {
     const mungedYelp = mungeYelpData(yelp); 
 
     expect(mungedYelp).toEqual(expect.arrayContaining(expectation));
+    
   });
 });
